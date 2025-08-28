@@ -7,12 +7,12 @@ import {
   View,
 } from "react-native";
 import React from "react";
+
+import { Link } from "expo-router";
 import ThemedView from "../../components/ThemedView";
 import Spacer from "../../components/Spacer";
-import useUser from "../../hooks/useUser";
 import ThemedButton from "../../components/ThemedButton";
-import { Colors } from "../../constants/Colors";
-import { Link } from "expo-router";
+import useUser from "../../hooks/useUser";
 
 const Home = () => {
   const { navigate } = useUser();

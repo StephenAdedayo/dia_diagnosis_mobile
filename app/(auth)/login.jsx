@@ -16,8 +16,8 @@ const Login = () => {
       <Spacer />
             <ThemedText title={true} style={styles.text}>Login here</ThemedText>
             <Spacer/>
-            <ThemedText style={styles.text1}>Welcome back you’ve {"\n"}
-                 been missed!</ThemedText>
+            <ThemedText style={styles.text1}>Welcome back! get
+                 diagnosed  {"\n"} for diabetes</ThemedText>
 
         <Spacer height={50}/>
 
@@ -27,7 +27,7 @@ const Login = () => {
       <ThemedTextInput placeholder="Email" keyboardType="email-address" style={styles.input}/>
       <Spacer height={30}/>
       <ThemedTextInput secureTextEntry style={styles.input} placeholder="Password"/>
-      <Spacer height={30}/>
+      <Spacer height={10}/>
       <View style={{ width: "83%"}}>
       <Link href={'/'} ><ThemedText style={{textAlign : "right", fontFamily : "Poppins-Regular"}}>Forgot your password?</ThemedText></Link>
        </View>
@@ -56,11 +56,11 @@ const styles = StyleSheet.create({
     },
     text: {
         textAlign : "center",
-        fontSize : 30
+        fontSize : 25
     },
     text1:{
         textAlign : "center",
-        fontSize : 20
+        fontSize : 15
     },
     input : {
         width : "83%"

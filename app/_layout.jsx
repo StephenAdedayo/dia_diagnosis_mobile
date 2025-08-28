@@ -19,7 +19,7 @@ const DrawerLayout = () => {
 
     const navigation = useNavigation()
 
-    
+  
   const [fontsLoaded] = useFonts({
     'Poppins-Regular': require('../assets/fonts/Poppins-Regular.ttf'),
   });
@@ -29,7 +29,6 @@ const DrawerLayout = () => {
 
   return (
     <UserContextProvider>
-        <GestureHandlerRootView>
       <StatusBar value="auto"/>
     <Drawer screenOptions={{
         headerStyle : {
@@ -41,13 +40,13 @@ const DrawerLayout = () => {
             <Ionicons size={20} name='menu' style={{paddingRight: 9}} />
         )
     }}>
+       <Drawer.Screen name='index' options={{title: "",  headerShown : false, drawerItemStyle : {display : "none"} }}/>
       <Drawer.Screen name='(tabs)' options={{title : "",  drawerItemStyle : {height : 0}}} />
-      <Drawer.Screen name='(auth)' options={{title: "", headerShown : false,  drawerItemStyle : {height: 0}}} />
+      <Drawer.Screen name='(auth)' options={{title: "", headerShown : false,  drawerItemStyle : {display: "none"}}} />
       <Drawer.Screen name='profile' options={{title : "Profile", drawerIcon : ({focused}) => (
         <Ionicons size={24} name={focused ? "person" : "person-outline"} color={focused ? theme.iconColorFocused : theme.iconColor}/>
       )}}  />
     </Drawer>
-    </GestureHandlerRootView>
     </UserContextProvider>
   )
 }

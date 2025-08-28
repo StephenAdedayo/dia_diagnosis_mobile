@@ -25,13 +25,12 @@ const RootLayout = () => {
         tabBarActiveTintColor : theme.iconColorFocused,
         tabBarInactiveTintColor : theme.iconColor
     }}>
-        <Tabs.Screen name='index' options={{title : "Home", tabBarIcon : ({focused}) => (
+        <Tabs.Screen name='home' options={{title : "Home", tabBarIcon : ({focused}) => (
             <Ionicons size={24} name={focused ? "home" : "home-outline"} color={focused ? theme.iconColorFocused : theme.iconColor}/>
         )}}/>
         <Tabs.Screen name='diagnosis' options={{title : "Diagnosis", tabBarIcon : ({focused}) => (
             <Ionicons size={24} name={focused ? "medkit" : "medkit-outline"} color={focused ? theme.iconColorFocused : theme.iconColor}/>
         )}}/>
-        <Tabs.Screen name='(auth)' options={{href : null}}/>
     </Tabs>
     </>
   )

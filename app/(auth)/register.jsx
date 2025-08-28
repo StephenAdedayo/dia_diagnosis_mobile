@@ -53,11 +53,11 @@ const styles = StyleSheet.create({
     },
     text: {
         textAlign : "center",
-        fontSize : 30
+        fontSize : 25
     },
     text1:{
         textAlign : "center",
-        fontSize : 20
+        fontSize : 15
     },
     input : {
         width : "83%"
