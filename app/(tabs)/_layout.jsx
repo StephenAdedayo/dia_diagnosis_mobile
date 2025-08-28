@@ -13,7 +13,7 @@ const RootLayout = () => {
     const theme = Colors[colorScheme] ?? Colors.light
 
   return (
-    <UserContextProvider>
+    <>
     <StatusBar value="auto"/>
     <Tabs screenOptions={{
         headerShown : false,
@@ -33,7 +33,7 @@ const RootLayout = () => {
         )}}/>
         <Tabs.Screen name='(auth)' options={{href : null}}/>
     </Tabs>
-    </UserContextProvider>
+    </>
   )
 }
 

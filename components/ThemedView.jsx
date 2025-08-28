@@ -10,7 +10,7 @@ const ThemedView = ({style, safe = false, ...prop}) => {
 
     if(!safe){
         return (
-     <View style={[{backgroundColor : theme.background}, style]} {...prop} />
+     <View style={[{backgroundColor : theme.background}, styles.container, style]} {...prop} />
         )
     }
 
@@ -18,7 +18,7 @@ const ThemedView = ({style, safe = false, ...prop}) => {
 
  if(safe){
   return (
-    <View style={[{backgroundColor : theme.background, paddingTop : inset.top, paddingBottom: inset.bottom}, style]} {...prop} />
+    <View style={[{backgroundColor : theme.background, paddingTop : inset.top, paddingBottom: inset.bottom}, styles.container, style]} {...prop} />
 
   )
  }
@@ -27,4 +27,8 @@ const ThemedView = ({style, safe = false, ...prop}) => {
 
 export default ThemedView
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container : {
+        fontFamily : "Poppins-Regular"
+    }
+})

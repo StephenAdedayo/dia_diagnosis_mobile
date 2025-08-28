@@ -1,0 +1,19 @@
+import { StyleSheet, Text, useColorScheme, View } from 'react-native'
+import React from 'react'
+import { Colors } from '../constants/Colors'
+
+const ThemedText = ({style, title = false, ...prop}) => {
+
+    const colorScheme = useColorScheme()
+    const theme = Colors[colorScheme] ?? Colors.light
+
+    const textColor = title ? theme.title : theme.text
+
+  return (
+      <Text style={[{color : textColor, fontFamily : "Poppins-Regular"}, style]} {...prop}/>
+ )
+}
+
+export default ThemedText
+
+const styles = StyleSheet.create({})

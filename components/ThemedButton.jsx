@@ -13,9 +13,9 @@ export default ThemedButton
 const styles = StyleSheet.create({
     button : {
         backgroundColor : Colors.primary,
-        paddingVertical : 10,
+        paddingVertical : 20,
         paddingHorizontal : 15,
-        borderRadius : 1
+        borderRadius : 6
     },
 
     pressed : {
